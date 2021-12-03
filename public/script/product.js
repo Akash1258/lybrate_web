@@ -303,7 +303,7 @@ function show5(productShow5_arr) {
 
 function details(id) {
 
-    window.location.href =`http://localhost:3000/products/${id}`;
+    window.location.href =`https://lybrateclone01.herokuapp.com/products/${id}`;
     // localStorage.setItem("myProducts", JSON.stringify(product));
 }
 
