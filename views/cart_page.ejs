@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://nu.lybcdn.com/img/lybrate_icon_325x325.png" />
+    <title>Cart page</title>
+    <link rel="stylesheet" href="/style/cart_page.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body onload="show_quantity(<%= JSON.stringify(cart_Items) %>)">
+
+    <div id="navContainer">
+        <div id="container">
+            <div id="nav_bar">
+                <a href="#"><img src="https://www.lybrate.com/img/Lybrate-Goodkart-Logo.png" alt=""></a>
+                <div class="search_bar">
+                    <input type="text" class="search_product">
+                    <a href=""><button class="search_btn"><span class="fa fa-search"></span></button></a>
+                </div>
+                <div class="select">
+                    <ul class="top_ul">
+                        <li class="top_li"><a href=""><button class="top_a"> Hello, Sign in<span
+                                        style="margin-left: 8px;" class="fas fa-angle-down"></span></button></a>
+                            <ul class="ul" style="text-align: left;">
+                                <li class="li"><a class="a" href="">Orders</a></li>
+                                <li class="li"><a class="a" href="">Buy Again</a></li>
+                                <li class="li"><a class="a" href="">DownLoad App</a></li>
+                                <li class="li"><a class="a" href="">Browse Health</a></li>
+                                <li class="li"><a class="a" href="">My Orders</a></li>
+                                <li class="li"><a class="a" href="">My Offers</a></li>
+                                <li class="li"><a class="a" href="">Health Feed</a></li>
+                                <li class="li"><a class="a" href="./signUp.html">Login/Signin</a></li>
+                                <li class="li"><a class="a" href="">For Doctors</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <a href="" style="margin: 0vh 2vh; margin-top: 10px;"><span id="pluslogo"
+                            class="fas fa-plus-square"></span><button class="lybrate_cash">LybrateCash</button></a>
+                    <a href="../index.ejs" class="home_btn"><button>Home</button> </a>
+                    <a href="" class="cart_logo"><span class="fas fa-cart-arrow-down"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="details" style="font-weight: 600;">
+
+            <div id="detais_of_product" style="display: flex; flex-direction:column-reverse; margin-bottom: auto; ">
+
+
+                <div id="btn" style="display: none;">
+
+                </div>
+            </div>
+            <div id="addresscontainer1">
+                <h1 class="addressh1"><i class="fas fa-arrow-left"></i> Address Details</h1>
+                <div id="inner_div_1">
+                    <h4 class="addressh4"> <i class="fas fa-1x fa-check-circle"></i> LOGIN OR SIGNUP</h4>
+                </div>
+                <div id="inner_div_2">
+                    <h4 class="addressh4"> <i class="fas fa-1x fa-check-circle"></i> ENTER OR VARIFY DETAILS</h4>
+                </div>
+                <div id="addressdetails">
+                    <input class="addinp" type="text" placeholder="Name*" id="name">
+                    <input class="addinp" type="text" placeholder="Mobile*" id="phone">
+                    <input class="addinp" type="text" placeholder="City" id="city">
+                    <br>
+                    <input class="addinp" type="text" placeholder="Pincode*" id="code">
+                    <input class="addinp" type="text" placeholder="Complete address*" id="adinput">
+
+                    <button id="edit">Edit</button>
+                    <button id="address" onclick="allitemadded()">Deliver To This Address</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- footer section -->
+
+    <section>
+        <div id="footer-div">
+            <div id="footer">
+                <div>
+
+                    <ul>
+                        <h5>Search Health Products</h5>
+                        <li> Goodkart</li>
+                        <li>Vitamin and Supplement</li>
+                        <li>Protein and Fitness</li>
+                        <li>Skin and Hair Care</li>
+                        <li>Sexual Wellness</li>
+                        <li>Weight Management</li>
+                        <li>Food and Drink</li>
+                        <li>Personal Care</li>
+                        <li>Child Care</li>
+                        <li>GoodBox</li>
+                    </ul>
+
+                </div>
+                <div>
+
+                    <ul>
+                        <h5>Search doctors</h5>
+                        <li> Search doctors by City</li>
+                        <li>Search doctors by City Locality</li>
+                        <li>Search doctors by speciality</li>
+                        <li>Search doctors by city speciality</li>
+                    </ul>
+
+                </div>
+                <div>
+
+                    <ul>
+                        <h5> Read Health Articles</h5>
+                        <li>Health Wiki</li>
+                        <li>Health Tips Index</li>
+                        <li>Health Questions Index</li>
+                        <li>Health Quizzes Index</li>
+                        <li>Health Topics Index</li>
+                        <li>Medicines Index</li>
+                        <li>Ailment Index</li>
+                        <li>Lab Test Details Index</li>
+                    </ul>
+
+                </div>
+                <div>
+                    <ul>
+                        <h5>Read about Lybrate</h5>
+                        <li>About Us </li>
+                        <li>Contact Us</li>
+                        <li>Careers</li>
+                        <li>Mobile Apps</li>
+                        <li>Blog</li>
+                        <li>Term of Use</li>
+                        <li>Privacy Policy</li>
+                        <li>Editorial Policy</li>
+                        <li>Press</li>
+
+                    </ul>
+
+                </div>
+                <div>
+                    <div class="social">
+
+                        <h5>Social</h5>
+                        <i class="fab fa-1x fa-facebook-f"></i>
+                        <i class="fab fa-1x fa-twitter"></i>
+                        <i class="fab fa-1x fa-linkedin-in"></i>
+                        <i class="fab fa-1x fa-youtube"></i>
+                        <br>
+                        <h5>Download App</h5>
+                        <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/logos/GooglePlay.png">
+                        <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/logos/AppStore.png">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+<script src="/script/cart_page.js"> 
+</script>
+<script src="https:kit.fontawesome.com/67c66657c7.js"></script>
+</html>
