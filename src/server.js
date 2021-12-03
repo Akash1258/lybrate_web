@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 
 const connect = () => {
-    return mongoose.connect("mongodb+srv://abhishek-hero:mahabharat@cluster0.z8hnh.mongodb.net/lybrate_cloneDB")
+    return mongoose.connect(`mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@cluster0.z8hnh.mongodb.net/lybrate_cloneDB`)
 }
 
 //, { useNewUrlParser: true }, { useUnifiedApology: true }
@@ -391,10 +391,13 @@ app.get("/products/cart/checkout/success",async(req,res)=>{
 
 
 //===================================================================
-app.listen(3000, async (req, res) => {
-    await connect()
-    console.log("Listening to post 3000")
+const PORT = process.env.PORT || 2930;
+// server
+app.listen(PORT, async () => {
+  await connect();
+  console.log("listening to port", PORT);
 })
+
 
 
 
