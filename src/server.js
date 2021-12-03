@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 
 const connect = () => {
-    return mongoose.connect(`mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@cluster0.z8hnh.mongodb.net/lybrate_cloneDB`)
+    return mongoose.connect(`mongodb+srv://abhishek-hero:mahabharat@cluster0.z8hnh.mongodb.net/lybrate_cloneDB`)
 }
 
 //, { useNewUrlParser: true }, { useUnifiedApology: true }
