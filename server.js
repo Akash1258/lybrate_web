@@ -31,6 +31,10 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("user", userSchema)
 
+
+app.get("/", async (req, res) => {
+    res.render("index.ejs")
+})
 app.get("/signup", async (req, res) => {
     // res.sendFile(__dirname + "../HTML/signUp.ejs")
     res.render("signUp.ejs")
