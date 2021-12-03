@@ -514,7 +514,7 @@
         addToCart.style.backgroundColor = `#ffffff`
         addToCart.style.cursor = "pointer"
         addToCart.onclick = function () {
-            window.location.href = `http://localhost:3000/products`
+            window.location.href = `https://lybrateclone01.herokuapp.com/products`
         }
 
         btn_div.append(proceedToBuy, addToCart);
